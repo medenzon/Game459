@@ -8,22 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D41220C6D8200076742 /* AppDelegate.swift */; };
-		AD760D44220C6D8200076742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D43220C6D8200076742 /* ViewController.swift */; };
+		AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D43220C6D8200076742 /* MenuViewController.swift */; };
 		AD760D47220C6D8200076742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD760D45220C6D8200076742 /* Main.storyboard */; };
 		AD760D4A220C6D8200076742 /* Game459.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD760D48220C6D8200076742 /* Game459.xcdatamodeld */; };
 		AD760D4C220C6D8300076742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD760D4B220C6D8300076742 /* Assets.xcassets */; };
 		AD760D4F220C6D8300076742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD760D4D220C6D8300076742 /* LaunchScreen.storyboard */; };
+		AD760D57220C6EE500076742 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D56220C6EE500076742 /* GameViewController.swift */; };
+		AD760D5D220C719C00076742 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D5C220C719C00076742 /* Location.swift */; };
+		AD760D5F220C727300076742 /* ProjectSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D5E220C727300076742 /* ProjectSettings.swift */; };
+		AD760D62220C736A00076742 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D61220C736A00076742 /* MapView.swift */; };
+		AD760D65220C743500076742 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D64220C743500076742 /* Block.swift */; };
+		AD760D68220C74B000076742 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D67220C74B000076742 /* Colors.swift */; };
+		AD760D6B220C785400076742 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D6A220C785400076742 /* Map.swift */; };
+		AD760D6D220C798B00076742 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D6C220C798B00076742 /* Ellipse.swift */; };
+		AD760D6F220C79C600076742 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D6E220C79C600076742 /* GameView.swift */; };
+		AD760D71220C97A300076742 /* Behaviors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D70220C97A300076742 /* Behaviors.swift */; };
+		AD760D73220C97C800076742 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D72220C97C800076742 /* Animator.swift */; };
+		AD760D77220C986800076742 /* CollisionBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D76220C986800076742 /* CollisionBehavior.swift */; };
+		AD760D79220C989500076742 /* GravityBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D78220C989500076742 /* GravityBehavior.swift */; };
+		AD760D7B220C989D00076742 /* AvatarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D7A220C989D00076742 /* AvatarBehavior.swift */; };
+		AD760D7D220C98A500076742 /* BlockBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D7C220C98A500076742 /* BlockBehavior.swift */; };
+		AD760D81220C99C100076742 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D80220C99C100076742 /* Elements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD760D3E220C6D8200076742 /* Game459.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game459.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD760D41220C6D8200076742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD760D43220C6D8200076742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD760D43220C6D8200076742 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AD760D46220C6D8200076742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD760D49220C6D8200076742 /* Game459.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game459.xcdatamodel; sourceTree = "<group>"; };
 		AD760D4B220C6D8300076742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD760D4E220C6D8300076742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD760D50220C6D8300076742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD760D56220C6EE500076742 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AD760D5C220C719C00076742 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AD760D5E220C727300076742 /* ProjectSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettings.swift; sourceTree = "<group>"; };
+		AD760D61220C736A00076742 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		AD760D64220C743500076742 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		AD760D67220C74B000076742 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD760D6A220C785400076742 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		AD760D6C220C798B00076742 /* Ellipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
+		AD760D6E220C79C600076742 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AD760D70220C97A300076742 /* Behaviors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behaviors.swift; sourceTree = "<group>"; };
+		AD760D72220C97C800076742 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		AD760D76220C986800076742 /* CollisionBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionBehavior.swift; sourceTree = "<group>"; };
+		AD760D78220C989500076742 /* GravityBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityBehavior.swift; sourceTree = "<group>"; };
+		AD760D7A220C989D00076742 /* AvatarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarBehavior.swift; sourceTree = "<group>"; };
+		AD760D7C220C98A500076742 /* BlockBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBehavior.swift; sourceTree = "<group>"; };
+		AD760D80220C99C100076742 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +89,86 @@
 			isa = PBXGroup;
 			children = (
 				AD760D41220C6D8200076742 /* AppDelegate.swift */,
-				AD760D43220C6D8200076742 /* ViewController.swift */,
+				AD760D58220C6F2300076742 /* Controllers */,
+				AD760D69220C767500076742 /* Views */,
+				AD760D60220C734E00076742 /* Models */,
+				AD760D63220C742300076742 /* UIModels */,
+				AD760D66220C749900076742 /* Material */,
+				AD760D5E220C727300076742 /* ProjectSettings.swift */,
 				AD760D45220C6D8200076742 /* Main.storyboard */,
-				AD760D4B220C6D8300076742 /* Assets.xcassets */,
 				AD760D4D220C6D8300076742 /* LaunchScreen.storyboard */,
+				AD760D4B220C6D8300076742 /* Assets.xcassets */,
 				AD760D50220C6D8300076742 /* Info.plist */,
 				AD760D48220C6D8200076742 /* Game459.xcdatamodeld */,
 			);
 			path = Game459;
+			sourceTree = "<group>";
+		};
+		AD760D58220C6F2300076742 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D43220C6D8200076742 /* MenuViewController.swift */,
+				AD760D56220C6EE500076742 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD760D60220C734E00076742 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D5C220C719C00076742 /* Location.swift */,
+				AD760D6A220C785400076742 /* Map.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD760D63220C742300076742 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D64220C743500076742 /* Block.swift */,
+				AD760D6C220C798B00076742 /* Ellipse.swift */,
+				AD760D74220C983100076742 /* Animation */,
+			);
+			path = UIModels;
+			sourceTree = "<group>";
+		};
+		AD760D66220C749900076742 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D67220C74B000076742 /* Colors.swift */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		AD760D69220C767500076742 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D61220C736A00076742 /* MapView.swift */,
+				AD760D6E220C79C600076742 /* GameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD760D74220C983100076742 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D72220C97C800076742 /* Animator.swift */,
+				AD760D80220C99C100076742 /* Elements.swift */,
+				AD760D75220C984300076742 /* Behaviors */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		AD760D75220C984300076742 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D70220C97A300076742 /* Behaviors.swift */,
+				AD760D76220C986800076742 /* CollisionBehavior.swift */,
+				AD760D78220C989500076742 /* GravityBehavior.swift */,
+				AD760D7A220C989D00076742 /* AvatarBehavior.swift */,
+				AD760D7C220C98A500076742 /* BlockBehavior.swift */,
+			);
+			path = Behaviors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +242,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD760D44220C6D8200076742 /* ViewController.swift in Sources */,
+				AD760D6B220C785400076742 /* Map.swift in Sources */,
+				AD760D71220C97A300076742 /* Behaviors.swift in Sources */,
+				AD760D65220C743500076742 /* Block.swift in Sources */,
+				AD760D68220C74B000076742 /* Colors.swift in Sources */,
+				AD760D62220C736A00076742 /* MapView.swift in Sources */,
+				AD760D57220C6EE500076742 /* GameViewController.swift in Sources */,
+				AD760D79220C989500076742 /* GravityBehavior.swift in Sources */,
+				AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */,
 				AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */,
+				AD760D5F220C727300076742 /* ProjectSettings.swift in Sources */,
+				AD760D77220C986800076742 /* CollisionBehavior.swift in Sources */,
+				AD760D6D220C798B00076742 /* Ellipse.swift in Sources */,
+				AD760D5D220C719C00076742 /* Location.swift in Sources */,
+				AD760D7B220C989D00076742 /* AvatarBehavior.swift in Sources */,
+				AD760D81220C99C100076742 /* Elements.swift in Sources */,
+				AD760D6F220C79C600076742 /* GameView.swift in Sources */,
+				AD760D73220C97C800076742 /* Animator.swift in Sources */,
 				AD760D4A220C6D8200076742 /* Game459.xcdatamodeld in Sources */,
+				AD760D7D220C98A500076742 /* BlockBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HPXGDUGWR;
 				INFOPLIST_FILE = Game459/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HPXGDUGWR;
 				INFOPLIST_FILE = Game459/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
