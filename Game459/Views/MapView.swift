@@ -25,6 +25,15 @@ class MapView: UIView {
         build()
     }
     
+    ///
+    /// Calculates the rown and column of a given point. This is used to map
+    /// a points x and y values to a specific index in the game's matrix
+    ///
+    /// - Parameters:
+    ///   - point: A given point in a view.
+    /// - Returns:
+    ///   - The Location (row and column) of a given point.
+    ///
     func coordinates(of point: CGPoint) -> Location {
         
         let col = Int(floor(point.x / (frame.width/CGFloat(map.cols))))
@@ -33,6 +42,16 @@ class MapView: UIView {
         return Location(row, col)
     }
     
+    ///
+    /// Determines the origin point in a view from the given location's row
+    /// and column. This is done by multiplying the location's row and column
+    /// values individually by the determined block size.
+    ///
+    /// - Parameters:
+    ///   - location: A row and column value.
+    /// - Returns:
+    ///   - The row and column's point
+    ///
     func origin(of location: Location) -> CGPoint {
         
         let x = CGFloat(location.col) * size
@@ -41,6 +60,10 @@ class MapView: UIView {
         return CGPoint(x: x, y: y)
     }
     
+    ///
+    /// Builds and displays the game's graphical map based on the map's
+    /// representational matrix.
+    ///
     func build() {
         
         for row in 0..<map.rows {

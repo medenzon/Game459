@@ -33,6 +33,10 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         updateMotion()
     }
     
+    ///
+    /// Initializes a MapView and positions it in the vertical and
+    /// horizontal center of the game view.
+    ///
     func addMapView() {
         
         let origin = CGPoint(x: 0, y: 0)
@@ -49,6 +53,10 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         self.addSubview(mapView)
     }
     
+    ///
+    /// Initializes an Ellipse type as the game's avatar, places it at
+    /// the starting point, and registers it with the games elements manager
+    ///
     func createAvatar() {
         
         let x = mapView.frame.origin.x + 1
@@ -65,12 +73,19 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         Elements.items.append(ellipse)
     }
     
+    ///
+    /// Registers the MapView's blocks with the game's elements manager.
+    ///
     func createBlocks() {
         
         Elements.blocks.append(contentsOf: mapView.blocks)
         Elements.items.append(contentsOf: mapView.blocks)
     }
     
+    ///
+    /// Initializes UIDynamics behaviors and registers them with the
+    /// game's elements manager.
+    ///
     func addBehaviors() {
         
         gravity = GravityBehavior(items: Elements.avatars)
