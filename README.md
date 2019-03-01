@@ -1,4 +1,4 @@
-# Game459
+# The-Maze-Game
 
 ## Swift Application with Apple UI Kit
 
