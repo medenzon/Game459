@@ -13,7 +13,9 @@ class Block: UIView {
     public var highlighted = false
     
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
+        
         self.layer.borderWidth = 1
         self.layer.borderColor = Color.white.cgColor
         self.backgroundColor = Color.white

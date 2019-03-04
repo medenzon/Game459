@@ -21,14 +21,11 @@ class GameViewController: UIViewController {
         view.addSubview(gameView)
     }
 
-    
     override var shouldAutorotate: Bool {
-        
         return false
     }
     
     override var prefersStatusBarHidden: Bool {
-        
         return true
     }
 }

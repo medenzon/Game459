@@ -20,17 +20,18 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     var motionManager: CMMotionManager!
     
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
         
         self.backgroundColor = Color.skyblue
         
-        addMapView()
-        createAvatar()
-        createBlocks()
-        addBehaviors()
-        addAnimator()
-        setupMotion()
-        updateMotion()
+        addMapView()        //  1
+        createAvatar()      //  2
+        createBlocks()      //  3
+        addBehaviors()      //  4
+        addAnimator()       //  5
+        setupMotion()       //  6
+        updateMotion()      //  7
     }
     
     ///
@@ -94,11 +95,19 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         blockBehavior = BlockBehavior(items: Elements.blocks)
     }
     
+    ///
+    /// Initializes a custom UIDynamicAnimator with the behaviors
+    /// initialized in addBehaviors().
+    ///
     func addAnimator() {
         
         animator = Animator(referenceView: self, behaviors: Behaviors.all)
     }
     
+    ///
+    /// Initialized the CoreMotion motion manager, and sets accelerometer
+    /// updates to an one-one thousandth of a second.
+    ///
     func setupMotion() {
         
         motionManager = CMMotionManager()
@@ -106,6 +115,13 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         motionManager.accelerometerUpdateInterval = 0.001
     }
     
+    ///
+    /// Updates the game's assets base on device's environmental information.
+    /// 1. Acceleration values are received as (*x*, *y*)
+    /// 2. The gravity's direction is set as (*x*, -*y*)
+    /// 3. Each item assigned a gravity behavior is updated with the new
+    ///    gravity direction.
+    ///
     func updateMotion() {
         
         self.motionManager.startAccelerometerUpdates(to: OperationQueue()) {
@@ -129,7 +145,6 @@ class GameView: UIView, UICollisionBehaviorDelegate {
             }
         }
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

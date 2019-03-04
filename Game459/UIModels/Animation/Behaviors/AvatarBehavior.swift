@@ -11,6 +11,7 @@ import UIKit
 class AvatarBehavior: UIDynamicItemBehavior {
     
     override init(items: [UIDynamicItem]) {
+        
         super.init(items: items)
         
         self.elasticity = 0.05
@@ -18,6 +19,6 @@ class AvatarBehavior: UIDynamicItemBehavior {
         self.density = 1
         self.allowsRotation = true
         
-        Behaviors.add(behavior: self)
+        Behaviors.add(self)
     }
 }

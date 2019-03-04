@@ -13,15 +13,17 @@ class CollisionBehavior: UICollisionBehavior {
     override init(items: [UIDynamicItem]) {
         
         super.init(items: items)
+        
         self.translatesReferenceBoundsIntoBoundary = true
     }
     
     init(items: [UIDynamicItem], delegate: UICollisionBehaviorDelegate) {
         
         super.init(items: items)
+        
         self.collisionDelegate = delegate
         self.translatesReferenceBoundsIntoBoundary = true
         
-        Behaviors.add(behavior: self)
+        Behaviors.add(self)
     }
 }
