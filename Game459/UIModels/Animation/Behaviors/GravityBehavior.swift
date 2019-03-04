@@ -9,9 +9,11 @@
 import UIKit
 
 class GravityBehavior: UIGravityBehavior {
+    
     override init(items: [UIDynamicItem]) {
+        
         super.init(items: items)
         
-        Behaviors.add(behavior: self)
+        Behaviors.add(self)
     }
 }

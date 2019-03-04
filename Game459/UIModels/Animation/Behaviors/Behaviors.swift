@@ -18,7 +18,8 @@ struct Behaviors {
         }
     }
     
-    static func add(behavior: UIDynamicBehavior) {
+    static func add(_ behavior: UIDynamicBehavior) {
+        
         behaviors.append(behavior)
     }
 }

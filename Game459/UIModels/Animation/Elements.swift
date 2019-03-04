@@ -10,9 +10,18 @@ import UIKit
 
 struct Elements {
     
+    ///
+    /// UIDynamicItems for generic game use.
+    ///
     static var items: [UIView] = []
     
+    ///
+    /// UIDynamicItems implemented as game avatars
+    ///
     static var avatars: [UIView] = []
     
+    ///
+    /// UIDynamicItems implemented as blocks on the game map.
+    ///
     static var blocks: [UIView] = []
 }
