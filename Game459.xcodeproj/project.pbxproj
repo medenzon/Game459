@@ -143,8 +143,8 @@
 		AD760D69220C767500076742 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AD760D61220C736A00076742 /* MapView.swift */,
 				AD760D6E220C79C600076742 /* GameView.swift */,
+				AD760D61220C736A00076742 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
