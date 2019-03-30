@@ -16,7 +16,7 @@ class Block: UIView {
         
         super.init(frame: frame)
         
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 2
         self.layer.borderColor = Color.white.cgColor
         self.backgroundColor = Color.white
     }
