@@ -30,6 +30,21 @@ class Map {
         }
     }
     
+    public var description: String {
+        
+        var string = ""
+        
+        for row in 0..<rows {
+            
+            for col in 0..<cols {
+                
+                string += String(matrix[row][col])
+            }
+        }
+        
+        return string
+    }
+    
     init() {
         self._matrix = []
         self._rows = 0
@@ -69,6 +84,15 @@ class Map {
     ///   - The map's value at the given row and column.
     ///
     func value(at location: Location) -> Int8 {
-        return matrix[location.row][location.col]
+        
+        var value: Int8 = -1
+        
+        if (location.row >= 0 && location.row < rows) &&
+           (location.col >= 0 && location.col < cols) {
+            
+            value = matrix[location.row][location.col]
+        }
+        
+        return value
     }
 }

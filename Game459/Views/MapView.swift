@@ -13,6 +13,8 @@ class MapView: UIView {
     var map: Map!
     var size: CGFloat!
     var blocks: [Block] = []
+    var stars: [Star] = []
+    var items: [[UIView]] = []
 
     init(frame: CGRect, map: Map) {
         
@@ -20,7 +22,7 @@ class MapView: UIView {
         
         self.map = map
         self.size = frame.width / CGFloat(map.cols)
-        self.backgroundColor = Color.skyblue
+        self.backgroundColor = Color.anthracite
         
         build()
     }
@@ -71,18 +73,41 @@ class MapView: UIView {
             for col in 0..<map.cols {
                 
                 let location = Location(row, col)
+                let origin = self.origin(of: location)
+                let size = CGSize(width: self.size, height: self.size)
                 
+                var rowItems: [UIView] = []
+
                 if map.value(at: location) == 1 {
                     
-                    let origin = self.origin(of: location)
-                    let size = CGSize(width: self.size, height: self.size)
-                    let box = Block(frame: CGRect(origin: origin, size: size))
+                    let block = Block(frame: CGRect(origin: origin, size: size))
                     
-                    blocks.append(box)
-                    self.addSubview(box)
+                    blocks.append(block)
+                    self.addSubview(block)
+                    rowItems.append(block)
+                    
+                } else if map.value(at: location) == 0 {
+                    
+                    let star = Star(frame: CGRect(origin: origin, size: size))
+                    
+                    stars.append(star)
+                    self.addSubview(star)
+                    rowItems.append(star)
                 }
             }
         }
+    }
+    
+    func cover(_ location: Location) {
+        
+        let origin = self.origin(of: location)
+        let size = CGSize(width: self.size, height: self.size)
+        let block = Block(frame: CGRect(origin: origin, size: size))
+        
+        block.layer.borderWidth = 0
+        block.backgroundColor = Color.anthracite
+        
+        self.addSubview(block)
     }
 
     required init?(coder aDecoder: NSCoder) {

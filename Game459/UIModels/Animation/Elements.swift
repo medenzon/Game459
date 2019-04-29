@@ -24,4 +24,9 @@ struct Elements {
     /// UIDynamicItems implemented as blocks on the game map.
     ///
     static var blocks: [UIView] = []
+    
+    ///
+    /// UIDynamicItems implemented as stars on the game map.
+    ///
+    static var stars: [UIView] = []
 }

@@ -14,6 +14,6 @@ class GravityBehavior: UIGravityBehavior {
         
         super.init(items: items)
         
-        Behaviors.add(self)
+//        Behaviors.add(self)
     }
 }

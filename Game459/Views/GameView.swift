@@ -14,25 +14,37 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     var mapView: MapView!
     var animator: Animator!
     var gravity: GravityBehavior!
+    var fallingBehavior: GravityBehavior!
     var collision: CollisionBehavior!
+    var collectionBehavior: CollectionBehavior!
     var avatarBehavior: AvatarBehavior!
     var blockBehavior: BlockBehavior!
     var motionManager: CMMotionManager!
+    var scoreboard: UILabel!
+    var score = 0
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        self.backgroundColor = Color.skyblue
+        self.backgroundColor = Color.anthracite
+        scoreboard = UILabel(frame: CGRect(x: 0, y: frame.height - 100, width: frame.width, height: 48))
+        scoreboard.adjustsFontSizeToFitWidth = true
+        scoreboard.textAlignment = .center
+        scoreboard.textColor = Color.white
+        scoreboard.text = String(score)
+        self.addSubview(scoreboard)
         
         addMapView()        //  1
         createAvatar()      //  2
         createBlocks()      //  3
-        addBehaviors()      //  4
-        addAnimator()       //  5
-        setupMotion()       //  6
-        updateMotion()      //  7
+        createStars()       //  4
+        addBehaviors()      //  5
+        addAnimator()       //  6
+        setupMotion()       //  7
+        updateMotion()      //  8
     }
+    
     
     ///
     /// Initializes a MapView and positions it in the vertical and
@@ -50,6 +62,10 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         let dy = (self.frame.height - mapView.frame.height) / 2
         
         mapView.transform = CGAffineTransform(translationX: 0, y: dy)
+        
+        for star in Elements.stars {
+            fallingBehavior.addItem(star)
+        }
         
         self.addSubview(mapView)
     }
@@ -84,17 +100,32 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     }
     
     ///
+    /// Registers the MapView's stars with the game's elements manager.
+    ///
+    func createStars() {
+        
+        Elements.stars.append(contentsOf: mapView.stars)
+//        Elements.items.append(contentsOf: mapView.stars)
+    }
+    
+    ///
     /// Initializes UIDynamics behaviors and registers them with the
     /// game's elements manager.
     ///
     func addBehaviors() {
         
         gravity = GravityBehavior(items: Elements.avatars)
+        Behaviors.add(gravity)
+        fallingBehavior = GravityBehavior()
+        fallingBehavior.gravityDirection = CGVector(dx: 0, dy: -1)
+//        Behaviors.add(fallingBehavior)
+//        gravity.addChildBehavior(fallingBehavior)
         collision = CollisionBehavior(items: Elements.items, delegate: self)
+        collectionBehavior = CollectionBehavior(items: Elements.stars + Elements.avatars, delegate: self)
+        collision.addChildBehavior(collectionBehavior)
         avatarBehavior = AvatarBehavior(items: Elements.avatars)
         blockBehavior = BlockBehavior(items: Elements.blocks)
     }
-    
     ///
     /// Initializes a custom UIDynamicAnimator with the behaviors
     /// initialized in addBehaviors().
@@ -112,7 +143,7 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
-        motionManager.accelerometerUpdateInterval = 0.001
+        motionManager.accelerometerUpdateInterval = 0.0001
     }
     
     ///
@@ -138,13 +169,75 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                 self.gravity.gravityDirection = CGVector(dx: dx, dy: dy * -1)
                 
                 for item in self.gravity.items {
+                    
                     self.animator.updateItem(usingCurrentState: item)
                 }
-                
+
+                let offsetY = self.mapView.frame.origin.y
+                var avatarCenter = self.gravity.items.first!.center
+                avatarCenter.y = avatarCenter.y - offsetY
+                self.collision(at: avatarCenter)
+
                 self.animator.addBehavior(self.gravity)
             }
         }
     }
+    
+    func collision(at point: CGPoint) {
+        
+        let location = mapView.coordinates(of: point)
+        let value = mapView.map.value(at: location)
+//        var item: UIView?
+        
+//        if (location.row >= 0 && location.row < mapView.items.count) &&
+//            (location.col >= 0 && location.col < mapView.items[0].count) {
+//
+//            item = mapView.items[location.row][location.col]
+//        }
+        
+        if value == 0 {
+            mapView.cover(location)
+            mapView.map.set(location, to: -1)
+            score += 1
+            scoreboard.text = String(score)
+            mapView.cover(location)
+        }
+        
+//        if value == 0 && item != nil {
+//            mapView.map.set(location, to: -1)
+//            score += 1
+//            scoreboard.text = String(score)
+//            self.bringSubviewToFront(item!)
+//            gravity.addItem(item!)
+//            self.animator.updateItem(usingCurrentState: item!)
+//        }
+        
+    }
+    
+    func collectStar(_ star: UIDynamicItem) {
+        fallingBehavior.addItem(star)
+        collectionBehavior.removeItem(star)
+        self.animator.updateItem(usingCurrentState: star)
+        score += 1
+    }
+    
+    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item1: UIDynamicItem, with item2: UIDynamicItem, at p: CGPoint){
+        
+//        guard behavior == collision.childBehaviors.first else { return }
+        
+        
+        if ((item1 as? UIView)?.tag == 0 && (item2 as? UIView)?.tag == 1) {
+            print("1")
+//            collectStar(item1)
+        
+        } else if ((item2 as? UIView)?.tag == 1 && (item1 as? UIView)?.tag == 0) {
+            print("2")
+//            collectStar(item2)
+    
+        }
+        
+    }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
