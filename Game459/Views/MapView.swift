@@ -71,13 +71,13 @@ class MapView: UIView {
         
         for row in 0..<map.rows {
             
+            var rowItems: [UIView] = []
+            
             for col in 0..<map.cols {
                 
                 let location = Location(row, col)
                 let origin = self.origin(of: location)
                 let size = CGSize(width: self.size, height: self.size)
-                
-                var rowItems: [UIView] = []
 
                 if map.value(at: location) == 1 {
                     
@@ -96,6 +96,8 @@ class MapView: UIView {
                     rowItems.append(star)
                 }
             }
+            
+            items.append(rowItems)
         }
     }
     

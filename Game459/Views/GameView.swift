@@ -31,13 +31,14 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         self.backgroundColor = Color.anthracite
         
         addMapView()        //  1
-        createAvatar()      //  2
-        createBlocks()      //  3
-        createStars()       //  4
-        addBehaviors()      //  5
-        addAnimator()       //  6
-        setupMotion()       //  7
-        updateMotion()      //  8
+        addScoreboard()     //  2
+        createAvatar()      //  3
+        createBlocks()      //  4
+        createStars()       //  5
+        addBehaviors()      //  6
+        addAnimator()       //  7
+        setupMotion()       //  8
+        updateMotion()      //  9
     }
     
     
@@ -211,19 +212,25 @@ class GameView: UIView, UICollisionBehaviorDelegate {
             mapView.map.set(location, to: -1)
             score += 1
             scoreboard.text = String(score)
-            mapView.cover(location)
-        }
-        
-        if (location.row >= 0 && location.row < mapView.items.count) &&
-            (location.col >= 0 && location.col < mapView.items[0].count) {
+//            mapView.cover(location)
             
-            item = mapView.items[location.row][location.col]
-            
-            UIView.animate(withDuration: 2.5) {
-                item?.transform = CGAffineTransform(translationX: 0, y: 1000)
-
+            if (location.row >= 0 && location.row < mapView.items.count) &&
+                (location.col >= 0 && location.col < mapView.items[0].count) {
+                
+                item = mapView.items[location.row][location.col]
+                
+                let offsetY = self.mapView.frame.origin.y
+                let dy = item?.frame.origin.y ?? 0 + offsetY
+                let duration = (1 - (dy / frame.height)) * 5
+                print("Duration: ", duration)
+                
+                UIView.animate(withDuration: 2.5) {
+                    
+                    item?.transform = CGAffineTransform(translationX: 0, y: (dy * -1) - 400)
+                }
             }
         }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
