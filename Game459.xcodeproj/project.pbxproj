@@ -29,6 +29,13 @@
 		AD760D7B220C989D00076742 /* AvatarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D7A220C989D00076742 /* AvatarBehavior.swift */; };
 		AD760D7D220C98A500076742 /* BlockBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D7C220C98A500076742 /* BlockBehavior.swift */; };
 		AD760D81220C99C100076742 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D80220C99C100076742 /* Elements.swift */; };
+		AD7D7FC622370CB8005D1F58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FC522370CB8005D1F58 /* ViewController.swift */; };
+		AD7D7FC822370D13005D1F58 /* MapMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */; };
+		AD7D7FCA22370D54005D1F58 /* MapMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FC922370D54005D1F58 /* MapMakerView.swift */; };
+		AD7D7FCC22370F27005D1F58 /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FCB22370F27005D1F58 /* DataLoad.swift */; };
+		ADA076A022739ABF00A022B0 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0769F22739ABF00A022B0 /* Star.swift */; };
+		ADA076A222739F9D00A022B0 /* CollectionBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA076A122739F9D00A022B0 /* CollectionBehavior.swift */; };
+		ADD24462225A645F006CE021 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD24461225A645F006CE021 /* FirstLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		AD760D7A220C989D00076742 /* AvatarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarBehavior.swift; sourceTree = "<group>"; };
 		AD760D7C220C98A500076742 /* BlockBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBehavior.swift; sourceTree = "<group>"; };
 		AD760D80220C99C100076742 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		AD7D7FC522370CB8005D1F58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMakerViewController.swift; sourceTree = "<group>"; };
+		AD7D7FC922370D54005D1F58 /* MapMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMakerView.swift; sourceTree = "<group>"; };
+		AD7D7FCB22370F27005D1F58 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
+		ADA0769F22739ABF00A022B0 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		ADA076A122739F9D00A022B0 /* CollectionBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBehavior.swift; sourceTree = "<group>"; };
+		ADD24461225A645F006CE021 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +108,8 @@
 				AD760D60220C734E00076742 /* Models */,
 				AD760D63220C742300076742 /* UIModels */,
 				AD760D66220C749900076742 /* Material */,
-				AD760D5E220C727300076742 /* ProjectSettings.swift */,
+				ADD24460225A6448006CE021 /* ProjectSettings */,
+				AD7D7FCB22370F27005D1F58 /* DataLoad.swift */,
 				AD760D45220C6D8200076742 /* Main.storyboard */,
 				AD760D4D220C6D8300076742 /* LaunchScreen.storyboard */,
 				AD760D4B220C6D8300076742 /* Assets.xcassets */,
@@ -107,8 +122,10 @@
 		AD760D58220C6F2300076742 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD7D7FC522370CB8005D1F58 /* ViewController.swift */,
 				AD760D43220C6D8200076742 /* MenuViewController.swift */,
 				AD760D56220C6EE500076742 /* GameViewController.swift */,
+				AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 			children = (
 				AD760D64220C743500076742 /* Block.swift */,
 				AD760D6C220C798B00076742 /* Ellipse.swift */,
+				ADA0769F22739ABF00A022B0 /* Star.swift */,
 				AD760D74220C983100076742 /* Animation */,
 			);
 			path = UIModels;
@@ -143,8 +161,9 @@
 		AD760D69220C767500076742 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AD760D61220C736A00076742 /* MapView.swift */,
 				AD760D6E220C79C600076742 /* GameView.swift */,
+				AD760D61220C736A00076742 /* MapView.swift */,
+				AD7D7FC922370D54005D1F58 /* MapMakerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,12 +182,22 @@
 			isa = PBXGroup;
 			children = (
 				AD760D70220C97A300076742 /* Behaviors.swift */,
-				AD760D76220C986800076742 /* CollisionBehavior.swift */,
-				AD760D78220C989500076742 /* GravityBehavior.swift */,
 				AD760D7A220C989D00076742 /* AvatarBehavior.swift */,
 				AD760D7C220C98A500076742 /* BlockBehavior.swift */,
+				ADA076A122739F9D00A022B0 /* CollectionBehavior.swift */,
+				AD760D76220C986800076742 /* CollisionBehavior.swift */,
+				AD760D78220C989500076742 /* GravityBehavior.swift */,
 			);
 			path = Behaviors;
+			sourceTree = "<group>";
+		};
+		ADD24460225A6448006CE021 /* ProjectSettings */ = {
+			isa = PBXGroup;
+			children = (
+				AD760D5E220C727300076742 /* ProjectSettings.swift */,
+				ADD24461225A645F006CE021 /* FirstLaunch.swift */,
+			);
+			path = ProjectSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +273,7 @@
 			files = (
 				AD760D6B220C785400076742 /* Map.swift in Sources */,
 				AD760D71220C97A300076742 /* Behaviors.swift in Sources */,
+				AD7D7FCA22370D54005D1F58 /* MapMakerView.swift in Sources */,
 				AD760D65220C743500076742 /* Block.swift in Sources */,
 				AD760D68220C74B000076742 /* Colors.swift in Sources */,
 				AD760D62220C736A00076742 /* MapView.swift in Sources */,
@@ -252,14 +282,20 @@
 				AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */,
 				AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */,
 				AD760D5F220C727300076742 /* ProjectSettings.swift in Sources */,
+				AD7D7FC822370D13005D1F58 /* MapMakerViewController.swift in Sources */,
+				AD7D7FC622370CB8005D1F58 /* ViewController.swift in Sources */,
+				AD7D7FCC22370F27005D1F58 /* DataLoad.swift in Sources */,
 				AD760D77220C986800076742 /* CollisionBehavior.swift in Sources */,
+				ADD24462225A645F006CE021 /* FirstLaunch.swift in Sources */,
 				AD760D6D220C798B00076742 /* Ellipse.swift in Sources */,
+				ADA076A222739F9D00A022B0 /* CollectionBehavior.swift in Sources */,
 				AD760D5D220C719C00076742 /* Location.swift in Sources */,
 				AD760D7B220C989D00076742 /* AvatarBehavior.swift in Sources */,
 				AD760D81220C99C100076742 /* Elements.swift in Sources */,
 				AD760D6F220C79C600076742 /* GameView.swift in Sources */,
 				AD760D73220C97C800076742 /* Animator.swift in Sources */,
 				AD760D4A220C6D8200076742 /* Game459.xcdatamodeld in Sources */,
+				ADA076A022739ABF00A022B0 /* Star.swift in Sources */,
 				AD760D7D220C98A500076742 /* BlockBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

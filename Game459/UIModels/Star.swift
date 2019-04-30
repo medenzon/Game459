@@ -1,26 +1,23 @@
 //
-//  Block.swift
+//  Star.swift
 //  Game459
 //
-//  Created by Michael Edenzon on 2/5/19.
+//  Created by Michael Edenzon on 4/26/19.
 //  Copyright © 2019 Michael Edenzon. All rights reserved.
 //
 
 import UIKit
 
-class Block: UIView {
+class Star: UIImageView {
     
-    static let id = 1
-    public var highlighted = false
+    static let id = 0
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        self.layer.borderWidth = 2
-        self.layer.borderColor = Color.lightGray.cgColor
-        self.backgroundColor = Color.lightGray
-        self.tag = Block.id
+        self.image = UIImage(named: "star.png")
+        self.tag = Star.id
     }
     
     required init?(coder aDecoder: NSCoder) {

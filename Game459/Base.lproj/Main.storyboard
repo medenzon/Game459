@@ -18,21 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-5y-eDm">
-                                <rect key="frame" x="144" y="264.5" width="87" height="138"/>
+                                <rect key="frame" x="149" y="264.5" width="77" height="138"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-vN-Wmt">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
                                         <state key="normal" title="New Game"/>
                                         <connections>
                                             <segue destination="jYc-e4-IeF" kind="presentation" modalTransitionStyle="crossDissolve" id="QoL-Xl-adC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx3-pP-zOe">
-                                        <rect key="frame" x="0.0" y="54" width="87" height="30"/>
-                                        <state key="normal" title="Leaderboard"/>
+                                        <rect key="frame" x="0.0" y="54" width="77" height="30"/>
+                                        <state key="normal" title="Map Maker"/>
+                                        <connections>
+                                            <segue destination="HyG-r6-RkI" kind="presentation" modalTransitionStyle="crossDissolve" id="GTn-bS-iPG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-WE-4iq">
-                                        <rect key="frame" x="0.0" y="108" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="108" width="77" height="30"/>
                                         <state key="normal" title="Login"/>
                                     </button>
                                 </subviews>
@@ -48,6 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-63" y="148"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Cg7-I4-9lZ">
@@ -62,7 +66,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvC-MS-mjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="27"/>
+            <point key="canvasLocation" x="786" y="42"/>
+        </scene>
+        <!--Map Maker View Controller-->
+        <scene sceneID="fNl-iI-biY">
+            <objects>
+                <viewController id="HyG-r6-RkI" customClass="MapMakerViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pxV-Zk-aLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="73H-Qs-H9D"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRv-tl-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="170"/>
         </scene>
     </scenes>
 </document>

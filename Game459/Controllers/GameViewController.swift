@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: ViewController {
     
     var gameView: GameView!
 
@@ -19,16 +19,5 @@ class GameViewController: UIViewController {
         self.gameView = GameView(frame: view.bounds)
         
         view.addSubview(gameView)
-    }
-
-    
-    override var shouldAutorotate: Bool {
-        
-        return false
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        
-        return true
     }
 }

@@ -14,9 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let firstLaunch = FirstLaunch()
+        
+        if firstLaunch.isFirstLaunch {
+            print("First launch.")
+            Data.createMaps()
+        } else {
+            print("Not first launch.")
+        }
+        
         return true
     }
 
@@ -88,6 +97,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

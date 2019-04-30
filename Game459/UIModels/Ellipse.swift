@@ -17,11 +17,14 @@ class Ellipse: UIView {
     }
     
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
     }
     
     convenience init(frame: CGRect, color: UIColor) {
+        
         self.init(frame: frame)
+        
         self.backgroundColor = color
         self.layer.cornerRadius = self.frame.width / 2
     }
