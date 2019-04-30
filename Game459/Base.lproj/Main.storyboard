@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,24 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-5y-eDm">
-                                <rect key="frame" x="149" y="264.5" width="77" height="138"/>
+                                <rect key="frame" x="144" y="237.5" width="87" height="192"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-vN-Wmt">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
                                         <state key="normal" title="New Game"/>
                                         <connections>
                                             <segue destination="jYc-e4-IeF" kind="presentation" modalTransitionStyle="crossDissolve" id="QoL-Xl-adC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx3-pP-zOe">
-                                        <rect key="frame" x="0.0" y="54" width="77" height="30"/>
+                                        <rect key="frame" x="0.0" y="54" width="87" height="30"/>
                                         <state key="normal" title="Map Maker"/>
                                         <connections>
                                             <segue destination="HyG-r6-RkI" kind="presentation" modalTransitionStyle="crossDissolve" id="GTn-bS-iPG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-vi-XSF">
+                                        <rect key="frame" x="0.0" y="108" width="87" height="30"/>
+                                        <state key="normal" title="Leaderboard"/>
+                                        <connections>
+                                            <segue destination="bhI-V7-Lyf" kind="presentation" modalTransitionStyle="crossDissolve" id="xae-2c-XD1"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-WE-4iq">
-                                        <rect key="frame" x="0.0" y="108" width="77" height="30"/>
+                                        <rect key="frame" x="0.0" y="162" width="87" height="30"/>
                                         <state key="normal" title="Login"/>
                                     </button>
                                 </subviews>
@@ -66,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvC-MS-mjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="42"/>
+            <point key="canvasLocation" x="1351" y="-67"/>
         </scene>
         <!--Map Maker View Controller-->
         <scene sceneID="fNl-iI-biY">
@@ -81,7 +88,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRv-tl-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="170"/>
+            <point key="canvasLocation" x="1471" y="311"/>
+        </scene>
+        <!--Leaderboard Controller Table View Controller-->
+        <scene sceneID="UqT-N7-IX9">
+            <objects>
+                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardControllerTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="00w-2i-OCV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SAk-mo-oxL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SAk-mo-oxL" id="Fso-AU-yZO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bhI-V7-Lyf" id="7F8-09-xbj"/>
+                            <outlet property="delegate" destination="bhI-V7-Lyf" id="jZ5-YO-8dy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CF-U7-QYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-423"/>
         </scene>
     </scenes>
 </document>

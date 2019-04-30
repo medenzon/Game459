@@ -99,6 +99,8 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         Elements.items.append(ellipse)
     }
     
+    
+    
     ///
     /// Registers the MapView's blocks with the game's elements manager.
     ///
