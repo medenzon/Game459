@@ -186,6 +186,8 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                 
                 if self.gameOver {
                     
+                    self.motionManager.stopAccelerometerUpdates()
+                    
                 } else {
                     
                     self.collision(at: avatarCenter)
@@ -201,39 +203,88 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         }
     }
     
-    func collision(at point: CGPoint) {
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension GameView {
+    
+    private func collision(at point: CGPoint) {
         
         let location = mapView.coordinates(of: point)
         let value = mapView.map.value(at: location)
-        var item: UIView?
         
         if value == 0 {
-            mapView.cover(location)
+            
             mapView.map.set(location, to: -1)
+            
             score += 1
             scoreboard.text = String(score)
-//            mapView.cover(location)
             
             if (location.row >= 0 && location.row < mapView.items.count) &&
                 (location.col >= 0 && location.col < mapView.items[0].count) {
                 
-                item = mapView.items[location.row][location.col]
+                let star = mapView.items[location.row][location.col]
                 
-                let offsetY = self.mapView.frame.origin.y
-                let dy = item?.frame.origin.y ?? 0 + offsetY
-                let duration = (1 - (dy / frame.height)) * 5
-                print("Duration: ", duration)
-                
-                UIView.animate(withDuration: 2.5) {
-                    
-                    item?.transform = CGAffineTransform(translationX: 0, y: (dy * -1) - 400)
-                }
+                beginCollectionAnimation(for: star)
             }
         }
-        
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func beginCollectionAnimation(for item: UIView) {
+        
+        mapView.bringSubviewToFront(item)
+        
+        let offsetY = self.mapView.frame.origin.y
+        let dy = item.frame.origin.y + offsetY
+        let duration = Double((1 - (dy / frame.height)) * 10)
+        
+        item.alpha = 0.5
+        
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.25, options: .curveEaseOut, animations: {
+            
+            let rot = self.rotationDirection()
+            
+            let randC = CGFloat(Double.random(in: 0.7 ..< 1) * 20) * rot
+            let randD = CGFloat((Double.random(in: 0.7 ..< 1) * 20)) * (rot * -1)
+            
+            item.transform = CGAffineTransform(a: 2, b: 2, c: randC, d: randD, tx: 0, ty: (dy * -1) - 400)
+            
+        }) { (true) in
+            
+            item.removeFromSuperview()
+        }
+    }
+    
+    private func rotationDirection() -> CGFloat {
+        
+        var n: Int!
+        let rand = Int.random(in: 0..<2)
+        
+        if rand == 1 {
+            
+            n = 1
+            
+        } else {
+            
+            n = -1
+        }
+        
+        return CGFloat(n)
+    }
+}
+
+
+extension GameView {
+    
+    private func clean() {
+        
+        for behavior in animator.behaviors {
+            
+            self.animator.removeBehavior(behavior)
+        }
+        
+        mapView.removeFromSuperview()
     }
 }

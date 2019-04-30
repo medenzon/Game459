@@ -30,24 +30,11 @@ class Map {
         }
     }
     
+    var _zeroCount: Int = 0
+    
     var zeroCount: Int {
-        
         get {
-            
-            var count = 0
-            
-            for row in 0..<rows {
-                
-                for col in 0..<cols {
-                    
-                    if matrix[row][col] == 0 {
-                        
-                        count += 1
-                    }
-                }
-            }
-            
-            return count
+            return _zeroCount
         }
     }
     
@@ -82,6 +69,25 @@ class Map {
         self._matrix = matrix
         self._rows = matrix.count
         self._cols = matrix[0].count
+        self._zeroCount = countZeros()
+    }
+    
+    private func countZeros() -> Int {
+ 
+        var count = 0
+        
+        for row in 0..<rows {
+            
+            for col in 0..<cols {
+                
+                if matrix[row][col] == 0 {
+                    
+                    count += 1
+                }
+            }
+        }
+        
+        return count
     }
     
     ///
