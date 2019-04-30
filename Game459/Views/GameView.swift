@@ -104,6 +104,15 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     ///
     func createBlocks() {
         
+        let top = Block(frame: CGRect(x: 0, y: mapView.frame.origin.y - mapView.size, width: frame.width, height: mapView.size))
+        let bottom = Block(frame: CGRect(x: 0, y: mapView.frame.origin.y + mapView.frame.height, width: frame.width, height: mapView.size))
+        
+        addSubview(top)
+        addSubview(bottom)
+        
+        Elements.blocks.append(contentsOf: [top, bottom])
+        Elements.items.append(contentsOf: [top, bottom])
+        
         Elements.blocks.append(contentsOf: mapView.blocks)
         Elements.items.append(contentsOf: mapView.blocks)
     }
