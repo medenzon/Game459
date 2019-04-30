@@ -208,6 +208,10 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     }
 }
 
+
+///
+/// Code for detecting collisions and animating a star collection.
+///
 extension GameView {
     
     private func collision(at point: CGPoint) {
@@ -272,19 +276,5 @@ extension GameView {
         }
         
         return CGFloat(n)
-    }
-}
-
-
-extension GameView {
-    
-    private func clean() {
-        
-        for behavior in animator.behaviors {
-            
-            self.animator.removeBehavior(behavior)
-        }
-        
-        mapView.removeFromSuperview()
     }
 }
