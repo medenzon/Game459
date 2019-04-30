@@ -84,7 +84,7 @@ struct Color {
     
     static var lightGray: UIColor {
         get {
-            return UIColor(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1.0)
+            return UIColor(red: 200/255.0, green: 200/255.0, blue: 200/255.0, alpha: 1.0)
         }
     }
     
