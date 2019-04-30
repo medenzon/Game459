@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class"/>
     <entity name="MapEntity" representedClassName="MapEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="matrix" optional="YES" attributeType="String" customClassName="[[Int8]]" syncable="YES"/>
@@ -7,5 +8,6 @@
     </entity>
     <elements>
         <element name="MapEntity" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Game" positionX="-63" positionY="9" width="128" height="45"/>
     </elements>
 </model>

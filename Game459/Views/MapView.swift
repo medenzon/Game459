@@ -32,7 +32,8 @@ class MapView: UIView {
     /// a points x and y values to a specific index in the game's matrix
     ///
     /// - Parameters:
-    ///   - point: A given point in a view.
+    ///   - point: A given point in a view. The point passed in should
+    ///            be offset as necessary to match the bounds of MapView.
     /// - Returns:
     ///   - The Location (row and column) of a given point.
     ///

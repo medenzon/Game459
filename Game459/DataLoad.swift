@@ -95,10 +95,8 @@ class Data {
     
     func retrieveData() {
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
 //        let managedContext = appDelegate?.persistentContainer.viewContexts
-        
-        
     }
 }

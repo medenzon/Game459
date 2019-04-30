@@ -30,6 +30,27 @@ class Map {
         }
     }
     
+    var zeroCount: Int {
+        
+        get {
+            
+            var count = 0
+            
+            for row in 0..<rows {
+                
+                for col in 0..<cols {
+                    
+                    if matrix[row][col] == 0 {
+                        
+                        count += 1
+                    }
+                }
+            }
+            
+            return count
+        }
+    }
+    
     public var description: String {
         
         var string = ""
