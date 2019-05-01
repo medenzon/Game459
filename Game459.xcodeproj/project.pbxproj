@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7110CC9F227910A300B583CF /* LeaderboardControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110CC9E227910A300B583CF /* LeaderboardControllerTableViewController.swift */; };
+		7110CC9F227910A300B583CF /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */; };
 		AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D41220C6D8200076742 /* AppDelegate.swift */; };
 		AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D43220C6D8200076742 /* MenuViewController.swift */; };
 		AD760D47220C6D8200076742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD760D45220C6D8200076742 /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7110CC9E227910A300B583CF /* LeaderboardControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardControllerTableViewController.swift; sourceTree = "<group>"; };
+		7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		AD760D3E220C6D8200076742 /* Game459.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game459.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD760D41220C6D8200076742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD760D43220C6D8200076742 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				AD760D43220C6D8200076742 /* MenuViewController.swift */,
 				AD760D56220C6EE500076742 /* GameViewController.swift */,
 				AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */,
-				7110CC9E227910A300B583CF /* LeaderboardControllerTableViewController.swift */,
+				7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				AD7D7FCA22370D54005D1F58 /* MapMakerView.swift in Sources */,
 				AD760D65220C743500076742 /* Block.swift in Sources */,
 				AD760D68220C74B000076742 /* Colors.swift in Sources */,
-				7110CC9F227910A300B583CF /* LeaderboardControllerTableViewController.swift in Sources */,
+				7110CC9F227910A300B583CF /* LeaderboardTableViewController.swift in Sources */,
 				AD760D62220C736A00076742 /* MapView.swift in Sources */,
 				AD760D57220C6EE500076742 /* GameViewController.swift in Sources */,
 				AD760D79220C989500076742 /* GravityBehavior.swift in Sources */,
@@ -447,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HPXGDUGWR;
+				DEVELOPMENT_TEAM = 79CXUSU744;
 				INFOPLIST_FILE = Game459/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,7 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HPXGDUGWR;
+				DEVELOPMENT_TEAM = 79CXUSU744;
 				INFOPLIST_FILE = Game459/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

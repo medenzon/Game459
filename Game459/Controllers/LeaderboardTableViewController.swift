@@ -1,5 +1,5 @@
 //
-//  LeaderboardControllerTableViewController.swift
+//  LeaderboardTableViewController.swift
 //  Game459
 //
 //  Created by Will Hundahl on 4/30/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeaderboardControllerTableViewController: UITableViewController {
+class LeaderboardTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1471" y="311"/>
         </scene>
-        <!--Leaderboard Controller Table View Controller-->
+        <!--Leaderboard Table View Controller-->
         <scene sceneID="UqT-N7-IX9">
             <objects>
-                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardControllerTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="00w-2i-OCV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
