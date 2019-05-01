@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-5y-eDm">
-                                <rect key="frame" x="144" y="237.5" width="87" height="192"/>
+                                <rect key="frame" x="144" y="264.5" width="87" height="138"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-vN-Wmt">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
@@ -40,10 +40,6 @@
                                         <connections>
                                             <segue destination="bhI-V7-Lyf" kind="presentation" modalTransitionStyle="crossDissolve" id="xae-2c-XD1"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-WE-4iq">
-                                        <rect key="frame" x="0.0" y="162" width="87" height="30"/>
-                                        <state key="normal" title="Login"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -70,10 +66,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IPT-in-jxc"/>
                     </view>
+                    <connections>
+                        <segue destination="bhI-V7-Lyf" kind="presentation" identifier="gameOverLeaderboard" modalTransitionStyle="crossDissolve" id="rdQ-Mk-QhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvC-MS-mjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="-67"/>
+            <point key="canvasLocation" x="606" y="-162"/>
         </scene>
         <!--Map Maker View Controller-->
         <scene sceneID="fNl-iI-biY">
@@ -88,12 +87,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRv-tl-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="311"/>
+            <point key="canvasLocation" x="1268" y="-107"/>
         </scene>
-        <!--Leaderboard Controller Table View Controller-->
+        <!--Leaderboard Table View Controller-->
         <scene sceneID="UqT-N7-IX9">
             <objects>
-                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardControllerTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="00w-2i-OCV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +115,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CF-U7-QYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="-423"/>
+            <point key="canvasLocation" x="836" y="638"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rdQ-Mk-QhX"/>
+    </inferredMetricsTieBreakers>
 </document>

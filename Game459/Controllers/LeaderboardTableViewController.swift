@@ -1,5 +1,5 @@
 //
-//  LeaderboardControllerTableViewController.swift
+//  LeaderboardTableViewController.swift
 //  Game459
 //
 //  Created by Will Hundahl on 4/30/19.
@@ -7,17 +7,62 @@
 //
 
 import UIKit
+import CoreData
 
-class LeaderboardControllerTableViewController: UITableViewController {
-
+class LeaderboardTableViewController: UITableViewController {
+    
+    var results: [Result]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        results = loadResults() ?? []
+        
+        for result in results {
+            print(result)
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    
+    private func loadResults() -> [Result]? {
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ScoreEntity")
+        request.returnsObjectsAsFaults = false
+        
+        var _results: [Result] = []
+        
+        do {
+            
+            let rows = try context.fetch(request) as? [NSManagedObject]
+            
+            for row in rows! {
+                
+                let name = row.value(forKey: "name") as? String
+                let points = row.value(forKey: "points") as? Int
+                let time = row.value(forKey: "time") as? Double
+                let score = Score(points: points!, time: time!)
+                let result = Result(name: name!, score: score)
+                
+                _results.append(result)
+            }
+            
+        } catch {
+            
+            print("Error 1")
+            
+            return nil
+        }
+        
+        return _results
     }
 
     // MARK: - Table view data source
