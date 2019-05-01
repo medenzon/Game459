@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-5y-eDm">
-                                <rect key="frame" x="144" y="237.5" width="87" height="192"/>
+                                <rect key="frame" x="144" y="264.5" width="87" height="138"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-vN-Wmt">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
@@ -40,10 +40,6 @@
                                         <connections>
                                             <segue destination="bhI-V7-Lyf" kind="presentation" modalTransitionStyle="crossDissolve" id="xae-2c-XD1"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-WE-4iq">
-                                        <rect key="frame" x="0.0" y="162" width="87" height="30"/>
-                                        <state key="normal" title="Login"/>
                                     </button>
                                 </subviews>
                             </stackView>
