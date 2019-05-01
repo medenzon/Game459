@@ -11,6 +11,7 @@ import CoreMotion
 
 class GameView: UIView, UICollisionBehaviorDelegate {
     
+    var controller: GameViewController!
     var mapView: MapView!
     var animator: Animator!
     var gravity: GravityBehavior!
@@ -24,10 +25,11 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     var gameOver = false
     var score = 0
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, controller: GameViewController) {
         
         super.init(frame: frame)
         
+        self.controller = controller
         self.backgroundColor = Color.anthracite
         
         addMapView()        //  1
@@ -111,6 +113,9 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         
         addSubview(top)
         addSubview(bottom)
+        
+        self.sendSubviewToBack(top)
+        self.sendSubviewToBack(bottom)
         
         Elements.blocks.append(contentsOf: [top, bottom])
         Elements.items.append(contentsOf: [top, bottom])
@@ -198,12 +203,13 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                 if self.gameOver {
                     
                     self.motionManager.stopAccelerometerUpdates()
+                    self.controller.gameEnded(with: Score(points: self.score, time: 10))
                     
                 } else {
                     
                     self.collision(at: avatarCenter)
                     
-                    if self.score >= self.mapView.map.zeroCount {
+                    if self.score >= 10 { // self.mapView.map.zeroCount {
                         
                         self.gameOver = true
                     }

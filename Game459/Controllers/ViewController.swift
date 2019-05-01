@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     }
     
     override var shouldAutorotate: Bool {
+        
         return false
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
         
+        return true
     }
 }
