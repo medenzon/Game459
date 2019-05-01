@@ -209,7 +209,7 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                     
                     self.collision(at: avatarCenter)
                     
-                    if self.score >= 10 { // self.mapView.map.zeroCount {
+                    if self.score >= self.mapView.map.zeroCount {
                         
                         self.gameOver = true
                     }

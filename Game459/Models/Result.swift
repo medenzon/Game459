@@ -22,3 +22,26 @@ struct Result {
         self.score = score
     }
 }
+
+extension Result: Equatable {
+    
+    static func == (lhs: Result, rhs:  Result) -> Bool {
+        
+        return lhs.score.points == rhs.score.points
+    }
+}
+
+extension Result: Comparable {
+    
+    static func < (lhs: Result, rhs: Result) -> Bool {
+        
+        if lhs.score.points > rhs.score.points {
+            
+            return lhs.score.points > rhs.score.points
+            
+        } else {
+            
+            return lhs.score.points < rhs.score.points
+        }
+    }
+}
