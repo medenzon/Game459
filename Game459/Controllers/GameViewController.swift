@@ -22,11 +22,9 @@ class GameViewController: ViewController {
         view.addSubview(gameView)
     }
     
-    func save(name: String, score: Score) -> Bool {
-        
-        var didSave = false
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
+    func save(name: String, score: Score) {
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
@@ -41,20 +39,14 @@ class GameViewController: ViewController {
             
             try managedContext.save()
             
-            didSave = true
-            
         } catch let error as NSError {
             
             print("Error: Unable to save.")
             print("\(error), \(error.userInfo)")
         }
-        
-        return didSave
     }
     
     func gameEnded(with score: Score) {
-        
-        var didSave = false
         
         let alert = UIAlertController(title: "Game Over", message: "Your score is \(score.points). Please enter your name.", preferredStyle: .alert)
         
@@ -63,14 +55,11 @@ class GameViewController: ViewController {
         }
         
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak alert] (_) in
-//            let textField = alert?.textFields![0]
-//            print("Text field: \(String(describing: textField!.text))")
             self.save(name: alert!.textFields![0].text!, score: score)
             self.performSegue(withIdentifier: "gameOverLeaderboard", sender: self)
         }))
         
         self.present(alert, animated: true, completion: nil)
-        
     }
     
     override var shouldAutorotate: Bool {
