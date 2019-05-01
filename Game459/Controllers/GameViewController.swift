@@ -48,11 +48,23 @@ class GameViewController: ViewController {
     
     func gameEnded(with score: Score) {
         
+//        UIView.animate(withDuration: 1.5, animations: {
+//
+//            self.gameView.transform = CGAffineTransform(scaleX: 0, y: 0)
+//
+//        }) { (true) in
+//
+//            self.gameView.removeFromSuperview()
+//            self.view.addSubview(CelebrationView(frame: self.view.bounds, points: score.points))
+//        }
+//        
         let alert = UIAlertController(title: "Game Over", message: "Your score is \(score.points). Please enter your name.", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
             textField.placeholder = "Enter name..."
         }
+        
+        alert.textFields?.first!.resignFirstResponder()
         
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak alert] (_) in
             self.save(name: alert!.textFields![0].text!, score: score)

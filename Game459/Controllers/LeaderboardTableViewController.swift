@@ -16,12 +16,10 @@ class LeaderboardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = Color.anthracite
+//        self.tableView.frame = CGRect(x: 0, y: 200, width: view.frame.width, height: view.frame.height - 200)
         results = loadResults() ?? []
         
-        for result in results {
-            print(result)
-        }
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -82,6 +80,9 @@ class LeaderboardTableViewController: UITableViewController {
 
         cell.textLabel?.text = results[indexPath.row].name
         cell.detailTextLabel?.text = String(results[indexPath.row].score.points)
+        cell.backgroundColor = Color.anthracite
+        cell.textLabel?.textColor = Color.white
+        cell.detailTextLabel?.textColor = Color.yellow
 
         return cell
     }
@@ -95,5 +96,14 @@ class LeaderboardTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    override var shouldAutorotate: Bool {
+        
+        return false
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
+    }
 }

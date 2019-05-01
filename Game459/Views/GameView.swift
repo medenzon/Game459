@@ -225,7 +225,6 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     }
 }
 
-
 ///
 /// Code for detecting collisions and animating a star collection.
 ///

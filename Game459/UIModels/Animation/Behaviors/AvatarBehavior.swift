@@ -15,8 +15,8 @@ class AvatarBehavior: UIDynamicItemBehavior {
         super.init(items: items)
         
         self.elasticity = 0.05
-        self.friction = 0.4
-        self.density = 1
+        self.friction = 0.5
+        self.density = 5
         self.allowsRotation = true
         
         Behaviors.add(self)
