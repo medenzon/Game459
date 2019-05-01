@@ -34,6 +34,9 @@
 		AD7D7FC822370D13005D1F58 /* MapMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */; };
 		AD7D7FCA22370D54005D1F58 /* MapMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FC922370D54005D1F58 /* MapMakerView.swift */; };
 		AD7D7FCC22370F27005D1F58 /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D7FCB22370F27005D1F58 /* DataLoad.swift */; };
+		AD8573232279F5F4001F40D2 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8573222279F5F4001F40D2 /* Score.swift */; };
+		AD857325227A0063001F40D2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD857324227A0063001F40D2 /* Result.swift */; };
+		AD8B1E9A227A09AC0099EE37 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8B1E99227A09AC0099EE37 /* StarsView.swift */; };
 		ADA076A022739ABF00A022B0 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0769F22739ABF00A022B0 /* Star.swift */; };
 		ADA076A222739F9D00A022B0 /* CollectionBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA076A122739F9D00A022B0 /* CollectionBehavior.swift */; };
 		ADD24462225A645F006CE021 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD24461225A645F006CE021 /* FirstLaunch.swift */; };
@@ -69,6 +72,9 @@
 		AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMakerViewController.swift; sourceTree = "<group>"; };
 		AD7D7FC922370D54005D1F58 /* MapMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMakerView.swift; sourceTree = "<group>"; };
 		AD7D7FCB22370F27005D1F58 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
+		AD8573222279F5F4001F40D2 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		AD857324227A0063001F40D2 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AD8B1E99227A09AC0099EE37 /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		ADA0769F22739ABF00A022B0 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		ADA076A122739F9D00A022B0 /* CollectionBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBehavior.swift; sourceTree = "<group>"; };
 		ADD24461225A645F006CE021 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 			children = (
 				AD760D5C220C719C00076742 /* Location.swift */,
 				AD760D6A220C785400076742 /* Map.swift */,
+				AD8573222279F5F4001F40D2 /* Score.swift */,
+				AD857324227A0063001F40D2 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +175,7 @@
 				AD760D6E220C79C600076742 /* GameView.swift */,
 				AD760D61220C736A00076742 /* MapView.swift */,
 				AD7D7FC922370D54005D1F58 /* MapMakerView.swift */,
+				AD8B1E99227A09AC0099EE37 /* StarsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD760D6B220C785400076742 /* Map.swift in Sources */,
+				AD8B1E9A227A09AC0099EE37 /* StarsView.swift in Sources */,
 				AD760D71220C97A300076742 /* Behaviors.swift in Sources */,
 				AD7D7FCA22370D54005D1F58 /* MapMakerView.swift in Sources */,
 				AD760D65220C743500076742 /* Block.swift in Sources */,
@@ -288,6 +298,7 @@
 				AD760D5F220C727300076742 /* ProjectSettings.swift in Sources */,
 				AD7D7FC822370D13005D1F58 /* MapMakerViewController.swift in Sources */,
 				AD7D7FC622370CB8005D1F58 /* ViewController.swift in Sources */,
+				AD8573232279F5F4001F40D2 /* Score.swift in Sources */,
 				AD7D7FCC22370F27005D1F58 /* DataLoad.swift in Sources */,
 				AD760D77220C986800076742 /* CollisionBehavior.swift in Sources */,
 				ADD24462225A645F006CE021 /* FirstLaunch.swift in Sources */,
@@ -297,6 +308,7 @@
 				AD760D7B220C989D00076742 /* AvatarBehavior.swift in Sources */,
 				AD760D81220C99C100076742 /* Elements.swift in Sources */,
 				AD760D6F220C79C600076742 /* GameView.swift in Sources */,
+				AD857325227A0063001F40D2 /* Result.swift in Sources */,
 				AD760D73220C97C800076742 /* Animator.swift in Sources */,
 				AD760D4A220C6D8200076742 /* Game459.xcdatamodeld in Sources */,
 				ADA076A022739ABF00A022B0 /* Star.swift in Sources */,
