@@ -11,6 +11,7 @@ import CoreMotion
 
 class GameView: UIView, UICollisionBehaviorDelegate {
     
+    var controller: GameViewController!
     var mapView: MapView!
     var animator: Animator!
     var gravity: GravityBehavior!
@@ -24,10 +25,11 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     var gameOver = false
     var score = 0
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, controller: GameViewController) {
         
         super.init(frame: frame)
         
+        self.controller = controller
         self.backgroundColor = Color.anthracite
         
         addMapView()        //  1
@@ -105,6 +107,18 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     /// Registers the MapView's blocks with the game's elements manager.
     ///
     func createBlocks() {
+        
+        let top = Block(frame: CGRect(x: 0, y: mapView.frame.origin.y - mapView.size, width: frame.width, height: mapView.size))
+        let bottom = Block(frame: CGRect(x: 0, y: mapView.frame.origin.y + mapView.frame.height, width: frame.width, height: mapView.size))
+        
+        addSubview(top)
+        addSubview(bottom)
+        
+        self.sendSubviewToBack(top)
+        self.sendSubviewToBack(bottom)
+        
+        Elements.blocks.append(contentsOf: [top, bottom])
+        Elements.items.append(contentsOf: [top, bottom])
         
         Elements.blocks.append(contentsOf: mapView.blocks)
         Elements.items.append(contentsOf: mapView.blocks)
@@ -189,12 +203,13 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                 if self.gameOver {
                     
                     self.motionManager.stopAccelerometerUpdates()
+                    self.controller.gameEnded(with: Score(points: self.score, time: 10))
                     
                 } else {
                     
                     self.collision(at: avatarCenter)
                     
-                    if self.score >= self.mapView.map.zeroCount {
+                    if self.score >= 10 { // self.mapView.map.zeroCount {
                         
                         self.gameOver = true
                     }
@@ -209,7 +224,6 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 
 ///
 /// Code for detecting collisions and animating a star collection.

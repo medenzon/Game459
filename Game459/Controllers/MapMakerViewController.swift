@@ -22,4 +22,13 @@ class MapMakerViewController: ViewController {
         super.viewDidLoad()
     }
     
+    override var shouldAutorotate: Bool {
+        
+        return false
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
+    }
 }

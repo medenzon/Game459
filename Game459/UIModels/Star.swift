@@ -12,11 +12,17 @@ class Star: UIImageView {
     
     static let id = 0
     
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        get {
+            return .ellipse
+        }
+    }
+    
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        self.image = UIImage(named: "star.png")
+        self.image = UIImage(named: "star.pdf")
         self.tag = Star.id
     }
     
