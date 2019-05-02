@@ -23,4 +23,6 @@
 
 - The application in it's entirety is based upon the architectural decisions that are employed by Apple when creating the Swift development interface. Because of this we are forced to follow strict guidelines in terms of decision making when loading the initial data, computing the data, and presenting it to the user. 
 
-- 
+- The final product needs to integrate with the Apple Game Store in order to create a real time user leaderboard calling an API endpoint to gather the list of users and their scores 
+
+- The final product also needs to submit user data using the user's apple ID to a server that stores the data on the highscores of the users. This information would then need to be sorted and ordered before being presented on the frontend in a table. 
