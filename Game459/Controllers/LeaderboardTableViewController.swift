@@ -19,7 +19,7 @@ class LeaderboardTableViewController: UITableViewController {
         view.backgroundColor = Color.anthracite
 //        self.tableView.frame = CGRect(x: 0, y: 200, width: view.frame.width, height: view.frame.height - 200)
         
-        results = loadResults()?.sorted() ?? []
+        results = loadResults()/*?.sorted()*/ ?? []
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -79,8 +79,8 @@ class LeaderboardTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
 
-        cell.textLabel?.text = results[indexPath.row].name
-        cell.detailTextLabel?.text = String(results[indexPath.row].score.points)
+        cell.textLabel?.text = results.sorted()[indexPath.row].name
+        cell.detailTextLabel?.text = String(results.sorted()[indexPath.row].score.points)
         cell.backgroundColor = Color.anthracite
         cell.textLabel?.textColor = Color.white
         cell.detailTextLabel?.textColor = Color.yellow
@@ -97,6 +97,14 @@ class LeaderboardTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
     
     override var shouldAutorotate: Bool {
         

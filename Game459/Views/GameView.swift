@@ -43,6 +43,7 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         addScoreboard()     //  2
         
         addTimer()          //  3
+        startTimer()
         
         createAvatar()      //  4
         createBlocks()      //  5
@@ -249,9 +250,10 @@ class GameView: UIView, UICollisionBehaviorDelegate {
                 var avatarCenter = self.gravity.items.first!.center
                 avatarCenter.y = avatarCenter.y - offsetY
                 
-                if self.gameOver {
+                if self.gameOver || self.totalTime == 0 {
                     
                     self.motionManager.stopAccelerometerUpdates()
+                    self.endTimer()
                     self.controller.gameEnded(with: Score(points: self.score, time: 10))
                     
                 } else {
