@@ -18,6 +18,6 @@
 #5/2/2019
 
 - A leaderboard was implemented using CoreData
-- Star animation incorporates asynchronous process to detect the environemntal data which is then translated and occurs while the avatar moves in accordance with the environmental data 
+- Star animation incorporates asynchronous process to detect the environmental data which is then translated and occurs while the avatar moves in accordance with the environmental data 
 - Collision detection and the timer run in conjunction with the score of the user at the time which is then uploaded to the core data and displayed on a leaderboard to compare past results
 - The timer adds another asynchronous process that runs during the game, and it conforms to our layered architecture of views -> managers & delegates -> controllers
