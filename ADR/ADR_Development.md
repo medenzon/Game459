@@ -18,6 +18,9 @@
 #5/2/2019
 
 - A leaderboard was implemented using CoreData
-- Star animation incorporates asynchronous process to detect the environmental data which is then translated and occurs while the avatar moves in accordance with the environmental data 
+- The application incorporates asynchronous processes to detect the environmental data which is then translated. All of this occurs while the avatar is being moved based on the accelerometer data which is provided by the harware within the phone 
+- Swift is a compiled language and when the application is compiled it's spun up inside Apple's proprietary containerization software 
+- The timer instance needs to access the time library and change the time asynchronously, presenting the user with a countdown timer from one minute
 - Collision detection and the timer run in conjunction with the score of the user at the time which is then uploaded to the core data and displayed on a leaderboard to compare past results
 - The timer adds another asynchronous process that runs during the game, and it conforms to our layered architecture of views -> managers & delegates -> controllers
+- Please look at the github commits on both forks of the application on github to see communal participation in the development of this application.
