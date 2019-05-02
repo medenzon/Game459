@@ -17,4 +17,5 @@
 
 - Although this feature would have been an excellent addition to the application - due to time related issues - The auto generating map feature was removed from the final product. This was mainly due to issues translating the python code into swift, a number of the functionals that python supports are nearly impossible in swift. 
 
-- 
+- The map maker is in integral piece of the puzzle when programming this game for production. To dynamically render the maps provides the user with the ability to continue on from one level to the next. The application will radomize an array of 1s and 0s as it does now, but instead would create the maps programmatically, and then load them into the core database. 
+
