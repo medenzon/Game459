@@ -18,4 +18,6 @@
 - CoreData: This framework will allow us to manage the model layer of our app. It is developed by apple (along with our other tools) making it the easiest to integrate into our system.
 # Final product details
 #5/2/2019
+
+- The final application provides the user with the ability to 
 - 

@@ -14,5 +14,7 @@
 
 
 # Update: For sprint 3: 
-- 
+
 - Although this feature would have been an excellent addition to the application - due to time related issues - The auto generating map feature was removed from the final product. This was mainly due to issues translating the python code into swift, a number of the functionals that python supports are nearly impossible in swift. 
+
+- 
