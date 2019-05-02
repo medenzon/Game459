@@ -19,5 +19,8 @@
 # Final product details
 #5/2/2019
 
-- The final application provides the user with the ability to 
+- The final application provides the user with the ability to interact with the user's Iphone using physical movement that is translated into the movement of the avatar on the viewport
+
+- The application in it's entirety is based upon the architectural decisions that are employed by Apple when creating the Swift development interface. Because of this we are forced to follow strict guidelines in terms of decision making when loading the initial data, computing the data, and presenting it to the user. 
+
 - 
