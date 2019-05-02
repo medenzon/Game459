@@ -74,18 +74,17 @@
             </objects>
             <point key="canvasLocation" x="1544.8" y="-138.0809595202399"/>
         </scene>
-        <!--Leaderboard Table View Controller-->
+        <!--Maze Leaderboard-->
         <scene sceneID="UqT-N7-IX9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3CF-U7-QYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="bhI-V7-Lyf" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="00w-2i-OCV">
+                <tableViewController title="Maze Leaderboard" id="bhI-V7-Lyf" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="00w-2i-OCV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResultCell" textLabel="rPe-mh-7aE" detailTextLabel="lsg-eV-umG" style="IBUITableViewCellStyleValue1" id="SAk-mo-oxL">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SAk-mo-oxL" id="Fso-AU-yZO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -116,6 +115,7 @@
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CF-U7-QYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1407" y="865"/>
         </scene>
@@ -138,17 +138,17 @@
             </objects>
             <point key="canvasLocation" x="-564" y="134"/>
         </scene>
-        <!--Leaderboard Table View Controller-->
+        <!--Maze Leaderboard-->
         <scene sceneID="5Zp-d6-wrV">
             <objects>
-                <tableViewController id="2Ww-gl-R4j" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ml8-sL-42I">
+                <tableViewController title="Maze Leaderboard" id="2Ww-gl-R4j" customClass="LeaderboardTableViewController" customModule="Game459" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ml8-sL-42I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResultCell" textLabel="gmQ-ad-exC" detailTextLabel="BfC-dV-wLM" style="IBUITableViewCellStyleValue1" id="ch7-Vs-Q4d">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ch7-Vs-Q4d" id="b19-g1-W1m">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

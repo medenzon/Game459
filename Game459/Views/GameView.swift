@@ -22,8 +22,15 @@ class GameView: UIView, UICollisionBehaviorDelegate {
     var blockBehavior: BlockBehavior!
     var motionManager: CMMotionManager!
     var scoreboard: UILabel!
+
     var gameOver = false
     var score = 0
+    
+    var time = 0
+    var timerLabel: UILabel!
+    var countdownTimer: Timer!
+    var totalTime = 60
+    
     
     init(frame: CGRect, controller: GameViewController) {
         
@@ -34,13 +41,16 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         
         addMapView()        //  1
         addScoreboard()     //  2
-        createAvatar()      //  3
-        createBlocks()      //  4
-        createStars()       //  5
-        addBehaviors()      //  6
-        addAnimator()       //  7
-        setupMotion()       //  8
-        updateMotion()      //  9
+        
+        addTimer()          //  3
+        
+        createAvatar()      //  4
+        createBlocks()      //  5
+        createStars()       //  6
+        addBehaviors()      //  7
+        addAnimator()       //  8
+        setupMotion()       //  9
+        updateMotion()      //  10
     }
     
     
@@ -80,6 +90,45 @@ class GameView: UIView, UICollisionBehaviorDelegate {
         scoreboard.text = String(score)
         self.addSubview(scoreboard)
     }
+    
+    ///
+    /// Build and place a UILabel below the MapView as the game's Timer
+    ///
+    func addTimer() {
+        
+        timerLabel = UILabel(frame: CGRect(x: 0, y: frame.height - 52, width: frame.width, height: 48))
+        timerLabel.adjustsFontSizeToFitWidth = true
+        timerLabel.textAlignment = .center
+        timerLabel.textColor = Color.white
+        timerLabel.text = String(time)
+        self.addSubview(timerLabel)
+    }
+    
+    func startTimer() {
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        timerLabel.text = "\(timeFormatted(totalTime))"
+        
+        if totalTime != 0 {
+            totalTime -= 1
+        } else {
+            endTimer()
+        }
+    }
+    
+    func endTimer() {
+        countdownTimer.invalidate()
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        //     let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
     
     ///
     /// Initializes an Ellipse type as the game's avatar, places it at

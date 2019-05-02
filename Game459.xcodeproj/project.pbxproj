@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7110CC9F227910A300B583CF /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */; };
+		71C9ED7A227A62C000674038 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C9ED79227A62C000674038 /* TimerViewController.swift */; };
 		AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D41220C6D8200076742 /* AppDelegate.swift */; };
 		AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760D43220C6D8200076742 /* MenuViewController.swift */; };
 		AD760D47220C6D8200076742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD760D45220C6D8200076742 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		71C9ED79227A62C000674038 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		AD760D3E220C6D8200076742 /* Game459.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game459.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD760D41220C6D8200076742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD760D43220C6D8200076742 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				AD760D56220C6EE500076742 /* GameViewController.swift */,
 				AD7D7FC722370D13005D1F58 /* MapMakerViewController.swift */,
 				7110CC9E227910A300B583CF /* LeaderboardTableViewController.swift */,
+				71C9ED79227A62C000674038 /* TimerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				AD760D44220C6D8200076742 /* MenuViewController.swift in Sources */,
 				AD760D42220C6D8200076742 /* AppDelegate.swift in Sources */,
 				AD760D5F220C727300076742 /* ProjectSettings.swift in Sources */,
+				71C9ED7A227A62C000674038 /* TimerViewController.swift in Sources */,
 				AD7D7FC822370D13005D1F58 /* MapMakerViewController.swift in Sources */,
 				AD7D7FC622370CB8005D1F58 /* ViewController.swift in Sources */,
 				AD8573232279F5F4001F40D2 /* Score.swift in Sources */,
