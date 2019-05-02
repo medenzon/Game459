@@ -16,3 +16,6 @@
 - Apple UIKit: Provides a robust SDK with pre-built objects optimized for iOS devices. The UI kit will allow us to develop and deploy rich, interactive features quickly.
 
 - CoreData: This framework will allow us to manage the model layer of our app. It is developed by apple (along with our other tools) making it the easiest to integrate into our system.
+# Final product details
+#5/2/2019
+- 
